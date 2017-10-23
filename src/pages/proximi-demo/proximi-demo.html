@@ -1,0 +1,101 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <button no-padding menuToggle ion-button color="light" clear class="ml10">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title class="pageHeaderTitle" text-capitalize padding>Zence Technology</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col text-center align-items-center>
+                <ion-avatar class="marginAuto bigAvatar">
+                    <img src="https://s3.amazonaws.com/ionic-io-static/7pDZM3Y4STKPPM7AQ56d_Zence logo_Dybde - slogan.svg">
+                </ion-avatar>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-list class="bgWhite clientsList with-margin-10px mainClient pb45">
+        <ion-item (click)="redirect('Report')">
+            <ion-grid no-padding>
+                <ion-row>
+                    <ion-col>
+                        <div class="headStyle">
+                            <h2 class="headerHead">
+                                Meld in HMS-hendelse
+                            </h2>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-item>
+        <ion-item (click)="redirect('UploadDocumentId')">
+            <ion-grid no-padding>
+                <ion-row>
+                    <ion-col>
+                        <div class="headStyle">
+                            <h2 class="headerHead">
+                                Hms-kort
+                            </h2>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-item>
+        <ion-item (click)="redirect('Contact')">
+            <ion-grid no-padding>
+                <ion-row>
+                    <ion-col>
+                        <div class="headStyle">
+                            <h2 class="headerHead">
+                                Kontakt Zence
+                            </h2>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<!--<ion-content padding class="about">-->
+<!--<div *ngIf="isShow">-->
+
+<!--<div class="data-row">-->
+<!--<div class="label">Status</div>-->
+<!--<div class="content"><pre>{{ proximiioStatus }}</pre></div>-->
+<!--</div>-->
+<!--<div class="data-row">-->
+<!--<div class="label">Position</div>-->
+<!--<div class="content"><pre>{{ lastPosition }}</pre></div>-->
+<!--</div>-->
+<!--<div class="data-row">-->
+<!--<div class="label">lastGeofenceTrigger</div>-->
+<!--<div class="content"><pre>{{ lastGeofenceTrigger }}</pre></div>-->
+<!--<ion-textarea [(ngModel)]="lastGeofenceTrigger"></ion-textarea>-->
+<!--</div>-->
+<!--<div class="data-row">-->
+<!--<div class="label">Last input</div>-->
+<!--<div class="content"><pre>{{ lastInput }}</pre></div>-->
+<!--</div>-->
+<!--<div class="data-row">-->
+<!--<div class="label">Last output</div>-->
+<!--<div class="content"><pre>{{ lastOutput }}</pre></div>-->
+<!--</div>-->
+<!--<div class="data-row">-->
+<!--<div class="label">Last beacon found</div>-->
+<!--<div class="content"><pre>{{ lastBeaconFound }}</pre></div>-->
+<!--</div>-->
+<!--<div class="data-row">-->
+<!--<div class="label">Last beacon lost</div>-->
+<!--<div class="content"><pre>{{ lastBeaconLost }}</pre></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div *ngIf="!isShow">-->
+<!--please signup-->
+<!--</div>-->
+<!--</ion-content>-->

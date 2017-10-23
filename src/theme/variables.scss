@@ -1,0 +1,168 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/v2/theming/
+$font-path: "../assets/fonts";
+
+@import "ionic.globals";
+@import "https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700i" ;
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+        primary: #017fc4,
+        secondary:#fff,
+        black:#000000,
+        danger: #f53d3d,
+        light: #f4f4f4,
+        dark: grey,
+        backgroundColor: #f7f7f7,
+        whiteColor:#000,
+        border: #ddd,
+        buttonColor: #5a9bd5,
+        allBackgground: #f7f7f7,
+        sidebarBackground: #017fc4,
+        redColor: rgba(86, 38, 38, 0.63),
+        greenColor: rgba(10, 38, 17, 0.66),
+        save:#017fc4
+);
+
+$text-color:                 #000000 !default;
+$link-color:                 map-get($colors, primary) !default;
+$background-color:           #fff !default;
+$subdued-text-color:         #666 !default;
+
+$font-family-base:           -apple-system, 'Roboto Condensed', sans-serif !default;
+$font-size-base:             1.4rem !default; // 1.4rem == 14px
+
+$content-padding:            15px !default;
+$content-margin:             15px !default;
+
+$toolbar-background:         transparent !default;
+$toolbar-border-color:       #b2b2b2 !default;
+$toolbar-text-color:         $text-color !default;
+$toolbar-active-color:       $link-color !default;
+$toolbar-inactive-color:     #8c8c8c !default;
+
+$tabs-background:            #f8f8f8 !default;
+$tabs-border-color:          #b2b2b2 !default;
+$tabs-tab-color-inactive:    #8c8c8c !default;
+$tabs-tab-color-active:      $link-color !default;
+
+$list-text-color:            $text-color !default;
+$list-background-color:      $background-color !default;
+$list-border-color:          map-get($colors , secondary) !default;
+
+$button-round-border-radius:0px;
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+$item-ios-padding-left: 0px !default;
+$searchbar-ios-background-color:#bed630 !default;
+$refresher-icon-color:#bed630;
+
+$action-sheet-ios-button-text-color: map-get($colors , primary) !default;
+$fab-ios-background-color:#4fcac1;
+$fab-ios-list-button-background-color:map-get($colors , secondary) !default;
+$toolbar-ios-border-color:map-get($colors , secondary) !default;
+$toolbar-ios-title-font-weight:400 !default;
+$list-ios-header-font-size:1.8em;
+$button-ios-height:2.0em;
+$toolbar-ios-title-font-size: 1.8rem !default;
+$alert-ios-checkbox-background-color-on: transparent !default;
+
+/// @prop - Size of the avatar in the item
+$item-ios-avatar-size:36px !default;
+
+
+/// @prop - Border radius of the avatar in the item
+$item-ios-avatar-border-radius:           0 !default;
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+$item-md-padding-left: 0px !default;
+$searchbar-md-background-color:#bed630 !default;
+$searchbar-md-input-border-radius:15px !default;
+$action-sheet-md-button-text-color: map-get($colors , primary) !default;
+$fab-md-background-color:#4fcac1;
+$fab-md-list-button-background-color:map-get($colors , secondary) !default;
+$toolbar-md-border-color:map-get($colors , secondary) !default;
+$toolbar-md-title-font-weight:400 !default;
+$list-md-header-border-bottom:1px solid transparent;
+$list-md-header-font-size:1.8em;
+$button-md-height:2.0em;
+$toolbar-md-title-font-size: 1.8rem !default;
+$alert-md-checkbox-background-color-on: transparent !default;
+
+/// @prop - Size of the avatar in the item
+$item-md-avatar-size:36px !default;
+
+
+/// @prop - Border radius of the avatar in the item
+$item-md-avatar-border-radius:           0 !default;
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+$item-wp-padding-left: 0px !default;
+$searchbar-wp-background-color:transparent !default;
+$action-sheet-wp-button-text-color: map-get($colors , primary) !default;
+$fab-wp-background-color:#4fcac1;
+$fab-wp-list-button-background-color:map-get($colors , secondary) !default;
+$toolbar-wp-border-color:map-get($colors , secondary) !default;
+$toolbar-wp-title-font-weight:400 !default;
+$list-wp-header-border-bottom:1px solid transparent;
+$list-wp-header-font-size:1.8em;
+$button-wp-height:2.0em;
+$toolbar-wp-title-font-size: 1.8rem !default;
+$alert-wp-checkbox-background-color-on: transparent !default;
+
+/// @prop - Size of the avatar in the item
+$item-wp-avatar-size:36px !default;
+
+
+/// @prop - Border radius of the avatar in the item
+$item-wp-avatar-border-radius:           0 !default;
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+
+@import "ionic.ionicons";
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+// Customize Grid
+//---------------------------------------------------
+
+$grid-padding-width: 5px !default

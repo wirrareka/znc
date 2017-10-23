@@ -1,0 +1,39 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <button no-padding menuToggle ion-button color="light" clear class="ml10">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title class="pageHeaderTitle" text-capitalize padding>dashboard</ion-title>
+        <div class="rightLogo">
+            <img src="../../assets/images/rightLogo.png">
+        </div>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col text-center  align-items-center>
+                <ion-avatar class="marginAuto bigAvatar">
+                    <img src="https://s3.amazonaws.com/ionic-io-static/7pDZM3Y4STKPPM7AQ56d_Zence logo_Dybde - slogan.svg">
+                </ion-avatar>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-grid no-padding class="fourSection">
+        <ion-row>
+            <ion-col col-12>
+                <ion-card no-margin [style.background]="'#818285'" (click)="redirect('OutstandingQuestionnaire')">
+                    <ion-card-header text-center>
+                        <ion-icon name="sync"></ion-icon>
+                    </ion-card-header>
+                    <ion-card-content text-center>
+                        Outstanding Quetionnaire
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+              
+        </ion-row>
+    </ion-grid>
+</ion-content>

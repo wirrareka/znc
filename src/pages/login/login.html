@@ -1,0 +1,44 @@
+<ion-content padding class="LoginPage">
+    <form name="loginForm" #loginForm="ngForm" (ngSubmit)="postLogin()" novalidate>
+        <ion-grid>
+            <ion-row>
+                <ion-col text-center  align-items-center>
+                    <ion-avatar class="marginAuto bigAvatar">
+                        <img src="assets/images/Vector-Smart-Object.png">
+                    </ion-avatar>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <ion-list>
+            <ion-list-header no-margin text-capitalize no-lines text-center class="loginhead">
+                Login
+            </ion-list-header>
+            <ion-item>
+                <ion-label floating>Email</ion-label>
+                <ion-input #email type="email" [(ngModel)]="credential.email" name="email" required
+                           pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$"></ion-input>
+                <small [hidden]="email.valid || (email.pristine && !loginForm.submitted)" class="text-danger">
+                    Email is required and format should be <i>john@doe.com</i>.
+                </small>
+            </ion-item>
+
+            <ion-item>
+                <ion-label floating>Password</ion-label>
+                <ion-input required type="password" [(ngModel)]="credential.password" name="password"></ion-input>
+            </ion-item>
+
+        </ion-list>
+
+    </form>
+    <ion-grid no-padding class="LoginButtons">
+        <ion-row justify-content-center>
+            <ion-col col-12 margin>
+                <button [disabled]="!loginForm.valid" ion-button color="primary" type="submit" (click)="postLogin()" full>Login
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+</ion-content>

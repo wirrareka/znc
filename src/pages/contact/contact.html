@@ -1,0 +1,62 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button no-padding menuToggle ion-button color="light" clear class="ml10">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title class="pageHeaderTitle" text-capitalize padding>Kontakt Zence</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <form [formGroup]="myForm" #form="ngForm">
+        <ion-card class="addNewCard">
+            <ion-card-header>
+                <h2>Send oss gjerne en e-post</h2>
+            </ion-card-header>
+
+            <ion-card-content padding>
+                <ion-list>
+                    <ion-item>
+                        <ion-label>Ditt Navn</ion-label>
+                        <ion-input type="text" formControlName="name" name="name" [(ngModel)]="contact.name"
+                                   required></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label>Din E-post</ion-label>
+                        <ion-input type="text" name="email" formControlName="email" [(ngModel)]="contact.email"
+                                   required></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label>Emne</ion-label>
+                        <ion-input type="text" name="subject" formControlName="subject" [(ngModel)]="contact.subject"
+                                   required></ion-input>
+                    </ion-item>
+
+
+                    <ion-item>
+                        <ion-label>Din melding</ion-label>
+                        <ion-input type="text" name="message" formControlName="message" [(ngModel)]="contact.message"
+                                   required></ion-input>
+                    </ion-item>
+
+                </ion-list>
+            </ion-card-content>
+            <ion-grid class="pb10">
+                <ion-row>
+                    <ion-col padding-left padding-right>
+
+                        <ion-spinner name="bubbles" *ngIf="is_in_progress"></ion-spinner>
+                        <button *ngIf="!is_in_progress" type="submit" [disabled]="form.invalid"
+                                (click)="submitContactForm()" ion-button
+                                 full color="primary">Send
+                        </button>
+                    </ion-col>
+                    <ion-col padding-left padding-right>
+                        <button ion-button type="button" full color="secondary" navPop>Cancel</button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card>
+    </form>
+</ion-content>

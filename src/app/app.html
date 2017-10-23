@@ -1,0 +1,40 @@
+<ion-menu [content]="mycontent" type="overlay">
+
+    <ion-header>
+        <ion-toolbar>
+            <ion-grid>
+                <ion-row>
+                    <ion-col text-center>
+                        <ion-avatar class="marginAuto">
+                            <img src="https://s3.amazonaws.com/ionic-io-static/7pDZM3Y4STKPPM7AQ56d_Zence logo_Dybde - slogan.svg" class="logo-avatar">
+                        </ion-avatar>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-toolbar>
+
+    </ion-header>
+
+
+    <ion-content class="sideBarContent overlay">
+
+        <ion-list>
+
+            <button ion-item (click)="redirect('Signup')" class="fontWhite" *ngIf="!isLoginAccess()">
+                <ion-icon name="log-in" class="pr10"></ion-icon>
+                Registrer deg
+            </button>
+            <!--*ngIf="isLoginAccess()"-->
+            <button ion-item (click)="redirect('ProximiDemo')" class="fontWhite" *ngIf="isLoginAccess()">
+               <ion-icon name="home" class="pr10"></ion-icon>
+                Dashboard
+            </button>
+
+        </ion-list>
+    </ion-content>
+
+</ion-menu>
+
+<ion-nav #mycontent [root]="rootPage"></ion-nav>
+
+

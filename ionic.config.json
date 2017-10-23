@@ -1,0 +1,8 @@
+{
+  "name": "supanovaapp",
+  "app_id": "cf7d9f8d",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

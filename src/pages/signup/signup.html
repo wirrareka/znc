@@ -1,0 +1,58 @@
+<ion-content padding class="LoginPage">
+    <form  [formGroup]="myForm">
+
+    <ion-grid>
+            <ion-row>
+                <ion-col text-center  align-items-center>
+                    <ion-avatar class="marginAuto bigAvatar">
+                        <img src="https://s3.amazonaws.com/ionic-io-static/7pDZM3Y4STKPPM7AQ56d_Zence logo_Dybde - slogan.svg">
+                    </ion-avatar>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <ion-list>
+              <ion-list-header no-margin text-capitalize no-lines text-center>
+                  Registrer deg
+                  <ion-spinner name="bubbles" *ngIf="uuid_waiting"></ion-spinner>
+              </ion-list-header>
+
+                <input type="hidden" name="uuid" formControlName="uuid" [(ngModel)]="user.uuid">
+
+                <ion-item>
+                  <ion-label floating>Name</ion-label>
+                    <ion-input formControlName="name" type="text" [(ngModel)]="user.name" name="name" required></ion-input>
+                </ion-item>
+
+              <ion-item>
+                 <ion-label floating>Phone</ion-label>
+                   <ion-input formControlName="phone" type="text" [(ngModel)]="user.phone" name="phone" required></ion-input>
+               </ion-item>
+
+               <ion-item>
+                 <ion-label floating>Firm</ion-label>
+                   <ion-input formControlName="firm" type="text" [(ngModel)]="user.firm" name="firm" required></ion-input>
+               </ion-item>
+
+              <ion-item>
+                 <ion-label floating>Comment</ion-label>
+                   <ion-input formControlName="comment" type="text" [(ngModel)]="user.comment" name="comment"
+                              required></ion-input>
+               </ion-item>
+
+              </ion-list>
+
+            </form>
+          <div>
+          </div>
+           <ion-grid no-padding>
+              <ion-row justify-content-center>
+                  <ion-col col-12 margin>
+                      <ion-spinner name="bubbles" *ngIf="is_in_progress"></ion-spinner>
+                      <button full *ngIf="!is_in_progress" [disabled]="!myForm.valid" (click)="postSignup()" ion-button type="submit" full>
+                          Submit</button>
+                  </ion-col>
+              </ion-row>
+          </ion-grid>
+
+</ion-content>
